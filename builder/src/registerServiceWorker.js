@@ -88,7 +88,7 @@ function checkValidServiceWorker(swUrl) {
           });
         });
       } else {
-        // Service worker found. Proceed as normal.
+        // Service worker found. Proceed as normal. Proceed with caution, like for real4
         registerValidSW(swUrl);
       }
     })

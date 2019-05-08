@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/Layout/layout';
+import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="App"> 
+        <Layout>
+            <BurgerBuilder />
+        </Layout>
       </div>
+
+      //The layout method is another way of awrapping the aapp completly in the root componinet
+      //I will s get naeter at a typooing and in every abven e of the soul that is a giveing o en vwint heeven hd
     );
   }
 }
+
+
 
 export default App;
