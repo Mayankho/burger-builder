@@ -1,7 +1,11 @@
 import React from 'react';
 
+//This lets the burgerIngredients become, dynamic b y setting up a swtitch case function.
+
+
 const burgerIngredients = (props) => {
-    let ingredient =null;
+    let ingredient =null; // This is to protect for if something invalid is passed in
+                          // THis ends up being changed when the proper, case is put in.
 
     switch(props.type){
         case('bread-bottom'):
