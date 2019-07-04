@@ -19,6 +19,7 @@ const burgerIngredients = (props) => {
                 </div>
             );
             break;
+            console.log('works', props)
             case('meat'):
                 ingredient = <div className= {classes.Meat}></div>;
                 break;
