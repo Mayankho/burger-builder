@@ -1,3 +1,15 @@
+--> App 
+    --> Layout: 
+            Toolbar: DrawerToggle, Logo, Navigation Items 
+            SideDrawer :
+            Backdrop :
+            {props.children} : [ Different pages ]
+
+  
+
+
+
+
 State : 
 
 ---> Ingredients 
@@ -8,6 +20,10 @@ Purchased: true
 Different Pages 
 
 ---> BurgerBuilder
+    --> BuildControls : BuildControl, BuildControl, ...OrderButton
+    --> Burger : Ingredient, Ingredients
+    --> Modal : {props.children} 
+    
 
---> 
+-->   
 
