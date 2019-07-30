@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types':
 
 //This lets the burgerIngredients become, dynamic b y setting up a swtitch case function.
 
 
-const burgerIngredients = (props) => {
-    let ingredient =null; // This is to protect for if something invalid is passed in
+class BurgerIngredients extends Component {
+    render (){
+        let ingredient =null; // This is to protect for if something invalid is passed in
                           // THis ends up being changed when the proper, case is put in.
 
-    switch(props.type){
+    switch(this.props.type){
         case('bread-bottom'):
             ingredient = <div className={classs.BreadBottom}></div>;
             break;
@@ -19,7 +21,6 @@ const burgerIngredients = (props) => {
                 </div>
             );
             break;
-            console.log('works', props)
             case('meat'):
                 ingredient = <div className= {classes.Meat}></div>;
                 break;
@@ -36,7 +37,12 @@ const burgerIngredients = (props) => {
                 ingredient = null;
     }
     return ingredient;
-};
+    }
+}
+
+BurgerIngredients.propTypes = {
+    type: PropTypes.string.isRequired
+}
 
 
-export default burgerIngredients;
+export default BurgerIngredients;
