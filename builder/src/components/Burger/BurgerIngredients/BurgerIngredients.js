@@ -1,17 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types':
+import PropTypes from 'prop-types';
+import classes from './BurgerIngredients.css';
 
 //This lets the burgerIngredients become, dynamic b y setting up a swtitch case function.
 
 
-class BurgerIngredients extends Component {
+
+
+
+class BurgerIngredients extends React.Component {
     render (){
         let ingredient =null; // This is to protect for if something invalid is passed in
                           // THis ends up being changed when the proper, case is put in.
 
     switch(this.props.type){
         case('bread-bottom'):
-            ingredient = <div className={classs.BreadBottom}></div>;
+            ingredient = <div className={classes.BreadBottom}></div>;
             break;
         case('bread-top'): 
             ingredient = (
@@ -28,7 +32,7 @@ class BurgerIngredients extends Component {
                 ingredient = <div className = {classes.Cheese}></div>;
                 break;
             case('salad'):
-                ingredients = <div className = {classes.Salad}></div>;
+                ingredient = <div className = {classes.Salad}></div>;
                 break;
             case ('bacon'):
                 ingredient = <div className = {classes.Bacon}></div>
