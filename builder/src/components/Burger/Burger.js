@@ -6,11 +6,17 @@ import BurgerIngredient from './BurgerIngredients/BurgerIngredients';
 
 
 const Burger = (props) => {
+    const transformedIngredients = Object.key(props.ingredients)
+        .map(igKey => {
+            return [...Array(props.ingresients[igKey])].map((_, i) => {
+                return <BurgerIngredient key = {igKey + i} type = {igKey}/>;
+            })
+        }); // Keys returns an array, and you can create an array with the spread operator...,
+        //
     return (
         <div className = {classes.Burger}>
             <BurgerIngredient type ="bread-top"/>
-            <BurgerIngredient type = "cheese" />
-            <BurgerIngredient type = "meat"/>
+           {transformedIngredients}
             <BurgerIngredient type = "bread-bottom"/>
         </div>
     );
@@ -27,8 +33,6 @@ const Burger = (props) => {
 //             currentBurgerIngredients = []
 //         }
 //     }
-
-
 //     render(){
 //         return(
 //             <div className = 'burger-create'>
