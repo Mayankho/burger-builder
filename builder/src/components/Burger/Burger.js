@@ -13,8 +13,8 @@ const Burger = (props) => {
             <BurgerIngredient type = "meat"/>
             <BurgerIngredient type = "bread-bottom"/>
         </div>
-    )
-}
+    );
+};
 
 
 
@@ -27,7 +27,8 @@ const Burger = (props) => {
 //             currentBurgerIngredients = []
 //         }
 //     }
-    
+
+
 //     render(){
 //         return(
 //             <div className = 'burger-create'>
