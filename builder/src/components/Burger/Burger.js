@@ -11,8 +11,14 @@ const Burger = (props) => {
             return [...Array(props.ingresients[igKey])].map((_, i) => {
                 return <BurgerIngredient key = {igKey + i} type = {igKey}/>;
             })
-        }); // Keys returns an array, and you can create an array with the spread operator...,
+        }).reduce((arr, el) => {
+            return arr.concat(el)
+        },[]);
+        if (transformedIngredients === 0 ){
+            transformedIngredients = <p>Please Start adding ingredients!</p>
+        } // Keys returns an array, and you can create an array with the spread operator...,
         //
+        console.log(transformedIngredients);
     return (
         <div className = {classes.Burger}>
             <BurgerIngredient type ="bread-top"/>
