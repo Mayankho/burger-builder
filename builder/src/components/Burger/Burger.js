@@ -6,18 +6,17 @@ import BurgerIngredient from './BurgerIngredients/BurgerIngredients';
 
 
 const Burger = (props) => {
-    const transformedIngredients = Object.key(props.ingredients)
+    let transformedIngredients = Object.keys(props.ingredients)
         .map(igKey => {
-            return [...Array(props.ingresients[igKey])].map((_, i) => {
+            return [...Array(props.ingredients[igKey])].map((_, i) => {
                 return <BurgerIngredient key = {igKey + i} type = {igKey}/>;
             })
         }).reduce((arr, el) => {
             return arr.concat(el)
         },[]);
-        if (transformedIngredients === 0 ){
+        if (transformedIngredients.length === 0 ){
             transformedIngredients = <p>Please Start adding ingredients!</p>
         } // Keys returns an array, and you can create an array with the spread operator...,
-        //
         console.log(transformedIngredients);
     return (
         <div className = {classes.Burger}>
