@@ -28,9 +28,6 @@ const Burger = (props) => {
 };
 
 
-
-
-
 // class Burger extends React.Component{
 //     constructor(){
 //         super();
