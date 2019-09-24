@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import Aux from '../../hoc/Aux';
 import Burger from '../../components/Burger/Burger'
 
+const INGREDIENT_PRICES = {
+    salad: 0.5, 
+    bacon: 0.4, 
+    cheese: 0.5, 
+    meat: 1
+}
+
+//All capital letter variables are global
 
 
 class BurgerBuilder extends Component{
@@ -11,7 +19,8 @@ class BurgerBuilder extends Component{
             bacon: 0, 
             cheese: 0, 
             meat: 0
-        }
+        },
+        totalPrice: 4,
     }
 
     addIngredientsHandler = (type) => {
