@@ -6,7 +6,7 @@ const INGREDIENT_PRICES = {
     salad: 0.5, 
     bacon: 0.4, 
     cheese: 0.5, 
-    meat: 1
+    meat: 1.3
 }
 
 //All capital letter variables are global
@@ -31,6 +31,9 @@ class BurgerBuilder extends Component{
             ...this.state.ingredients
         };
         updatedIngredients[type] = updatedCount;
+        const priceAddition = INGREDIENT_PRICES[type];
+        const oldPrice  = this.state.totalPrice;
+        const newPrice = oldPrice + PriceAddition;
     }
 
     render(){
