@@ -18,8 +18,14 @@ const buildControls = (props) => (
             <BuildControl 
             key={ctrl.label} 
             label={ctrl.label}
-            added = {() => props.ingredientAdded(ctrl.type)} />
+            added = {() => props.ingredientAdded(ctrl.type)}
+            removed = {() => props.ingredientRemoved(ctrl.type)}
+            
+            />
         ))}
+        <button>
+                ORDER NOW
+        </button>
     </div>
 );
 
