@@ -23,7 +23,6 @@ class BurgerBuilder extends Component{
         },
         totalPrice: 4,
     }
-// redo
     addIngredientsHandler = (type) => {
         const oldCount = this.state.ingredients[type];
         //Type is going to be the name of the ingredient. \
