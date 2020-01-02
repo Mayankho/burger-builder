@@ -11,7 +11,6 @@ const controls = [
     {label: 'Meat', type: 'meat'},
 ]
 
-
 const buildControls = (props) => (
     <div className={classes.BuildControls}>
         {controls.map(ctrl => (
@@ -20,8 +19,7 @@ const buildControls = (props) => (
             label={ctrl.label}
             added = {() => props.ingredientAdded(ctrl.type)}
             removed = {() => props.ingredientRemoved(ctrl.type)}
-            
-            />
+            /> 
         ))}
         <button
         className={classes.OrderButton}
@@ -32,7 +30,5 @@ const buildControls = (props) => (
     </div>
 );
 
-//Mapping each element of the array into the Build Control component
-// Need to keep up  with which type the build control
 
 export default buildControls;
